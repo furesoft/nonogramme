@@ -118,7 +118,14 @@
             "scripts": []
           }
         }
-      }
+      },
+      "deploy": {
+        "builder": "angular-cli-ghpages:deploy",
+        "options": {
+          "repo": "https://github.com/furesoft/sql_adventures.git",
+          "branch": "gh-pages-from-actions",
+          "dir": "dist/sql_adventures/browser"
+        }
     }
   },
   "cli": {
