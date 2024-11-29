@@ -6,7 +6,6 @@
     "start": "ng serve",
     "build": "ng build --base-href /sql_adventures/",
     "watch": "ng build --watch --configuration development",
-    "deploy": "ng deploy",
     "test": "ng test"
   },
   "private": true,
