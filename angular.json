@@ -41,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sql-adventures",
+            "outputPath": "dist/sql_adventures",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -117,15 +117,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/furesoft/sql_adventures.git",
+            "branch": "gh-pages-from-actions",
+            "dir": "dist/sql_adventures/browser"
+          }
         }
-      },
-      "deploy": {
-        "builder": "angular-cli-ghpages:deploy",
-        "options": {
-          "repo": "https://github.com/furesoft/sql_adventures.git",
-          "branch": "gh-pages-from-actions",
-          "dir": "dist/sql_adventures/browser"
-        }
+      }
     }
   },
   "cli": {

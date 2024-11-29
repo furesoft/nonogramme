@@ -30,13 +30,5 @@ jobs:
       - run: npm install -g @angular/cli@18
       - run: |
           npm i
-          ng build --output-path ./dist
-
-      - name: Deploy to Github Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: main # The branch the action should deploy from.
-          BRANCH: gh-pages-from-actions # The branch the action should deploy to.
-          FOLDER: ./dist/browser
-          SINGLE_COMMIT: true
+          ng build
+          ng deploy
